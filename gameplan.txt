@@ -1,0 +1,31 @@
+p2p-file-sharing/
+│── cmd/                     # CLI commands
+│   ├── root.go               # Main CLI entry point
+│   ├── share.go              # Command to share a file
+│   ├── list.go               # Command to list files
+│   ├── download.go           # Command to download a file
+│
+│── internal/                 # Internal logic (non-exported)
+│   ├── network/              # P2P networking layer
+│   │   ├── peer.go           # Peer discovery and connection
+│   │   ├── server.go         # TCP/UDP server
+│   │   ├── client.go         # TCP/UDP client
+│   │
+│   ├── file/                 # File management
+│   │   ├── storage.go        # Handles local file storage
+│   │   ├── transfer.go       # Handles file sending/receiving
+│   │
+│   ├── discovery/            # Peer discovery mechanism
+│   │   ├── dht.go            # Distributed hash table (DHT) logic
+│   │   ├── bootstrap.go      # Bootstrap nodes for peer discovery
+│
+│── config/                   # Config files (e.g., peer settings)
+│   ├── config.json           # Stores app configuration
+│
+│── pkg/                      # Reusable utility packages
+│   ├── logger/               # Logging utilities
+│   ├── utils/                # Helper functions
+│
+│── main.go                    # Application entry point
+│── go.mod                      # Go module file
+│── README.md                   # Documentation
